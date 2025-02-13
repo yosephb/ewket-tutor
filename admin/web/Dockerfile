@@ -2,12 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files first for better caching
+
+RUN apk add --no-cache libc6-compat
+
+# Copy package files first
 COPY package*.json ./
 
-# Install dependencies and ensure next is executable
-RUN npm install && \
-    chmod +x node_modules/.bin/next
+RUN npm ci
 
 # Copy the rest of the application
 COPY . .

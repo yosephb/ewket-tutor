@@ -1,8 +1,13 @@
-export default function Home() {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">Welcome to Ewket Tutor (Admin)</h1>
+import Layout from '../components/Layout'
+
+export default function AdminHome() {
+  return (
+    <Layout>
+      <div className="container mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
+        {/* Add your dashboard content here */}
       </div>
-    );
-  }
+    </Layout>
+  )
+}
   

@@ -4,6 +4,8 @@ from langchain_openai import ChatOpenAI
 from typing import Dict, List, Optional
 import os
 import logging
+from dotenv import load_dotenv
+load_dotenv() 
 
 logger = logging.getLogger(__name__)
 

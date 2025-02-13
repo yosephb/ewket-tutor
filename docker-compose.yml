@@ -31,41 +31,6 @@ services:
       start_period: 10s
     restart: always
 
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: ewket-tutor-backend
-    ports:
-      - "8001:8000"
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - CHROMADB_HOST=chromadb
-      - CHROMADB_PORT=8000
-      - DATABASE_URL=postgresql://ewket:ewket123@database:5432/ewket_tutor
-    depends_on:
-      - database
-      - chromadb
-    volumes:
-      - ./backend:/app
-      - ./backend/data/uploads:/app/data/uploads
-    restart: always
-
-  student-web:
-    build: ./student/web
-    container_name: ewket-student-web
-    depends_on:
-      - backend
-    ports:
-      - "3001:3000"
-
-  admin-web:
-    build: ./admin/web
-    container_name: ewket-admin-web
-    depends_on:
-      - backend
-    ports:
-      - "3002:3000"
 
 volumes:
   postgres_data:

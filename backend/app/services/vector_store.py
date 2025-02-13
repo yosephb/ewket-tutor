@@ -9,8 +9,11 @@ logger = logging.getLogger(__name__)
 
 class VectorStore:
     def __init__(self):
+        print("inside VectorStore class")
+        print(os.getenv("CHROMADB_HOST", "localhost"))
         self.client = chromadb.HttpClient(
-            host=os.getenv("CHROMADB_HOST", "chromadb"),
+            #host=os.getenv("CHROMADB_HOST", "chromadb"), -"- when FASTAPI from within docker
+            host="localhost",
             port=int(os.getenv("CHROMADB_PORT", 8000))
         )
         self.collection = self.client.get_or_create_collection("textbook_content")
