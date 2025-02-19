@@ -8,8 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class VectorStore:
-    def __init__(self):
-        print("inside VectorStore class")
+    def __init__(self):       
         print(os.getenv("CHROMADB_HOST", "localhost"))
         self.client = chromadb.HttpClient(
             #host=os.getenv("CHROMADB_HOST", "chromadb"), -"- when FASTAPI from within docker
@@ -29,7 +28,6 @@ class VectorStore:
             for i, chunk in enumerate(chunks):
                 chunk_id = f"{metadata['subject']}_grade_{metadata['grade']}_{i}"
                 
-                # Fix metadata access syntax
                 chunk_metadata = {
                     "subject": metadata["subject"],
                     "grade": metadata["grade"],
@@ -53,7 +51,7 @@ class VectorStore:
                 embeddings=embeddings
             )
 
-            return len(texts)
+            return ids  # Return the IDs instead of the length
 
         except Exception as e:
             logger.error(f"Error adding document: {str(e)}")

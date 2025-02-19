@@ -19,6 +19,7 @@ export default function ChunkViewer({ onChunkSelect }: ChunkViewerProps) {
     total_pages: 1,
     total_items: 0
   });
+  const [processingFolder, setProcessingFolder] = useState<string | null>(null);
 
   useEffect(() => {
     fetchFolders();
@@ -70,6 +71,43 @@ export default function ChunkViewer({ onChunkSelect }: ChunkViewerProps) {
     }
   };
 
+  const createEmbeddings = async (folderName: string) => {
+    try {
+      setProcessingFolder(folderName);
+      setError(null); // Clear any previous errors
+      
+      console.log(`Making POST request to: http://localhost:8001/api/admin/documents/index/${folderName}`);
+      
+      const response = await fetch(`http://localhost:8001/api/admin/documents/index/${folderName}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
+      console.log('Response status:', response.status);
+      const data = await response.json();
+      console.log('Response data:', data);
+      
+      if (!response.ok) {
+        throw new Error(data.detail || 'Failed to create embeddings');
+      }
+      
+      if (data.status === 'success') {
+        // Show success message
+        alert(data.message);
+        // Refresh the folders to show updated status
+        await fetchFolders();
+      } else {
+        setError('Failed to create embeddings');
+      }
+    } catch (err) {
+      setError('Error creating embeddings: ' + err.message);
+    } finally {
+      setProcessingFolder(null);
+    }
+  };
+
   const handleBackToFolders = () => {
     setSelectedFolder(null);
     setChunks([]);
@@ -86,20 +124,53 @@ export default function ChunkViewer({ onChunkSelect }: ChunkViewerProps) {
     return (
       <div className="container mx-auto p-4">
         <h2 className="text-xl font-semibold mb-4">Select a Document</h2>
+        {error && (
+          <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+            {error}
+          </div>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {folders.map((folder) => (
             <div
               key={folder.name}
               className="p-4 border rounded-lg hover:shadow-lg cursor-pointer transition-shadow"
-              onClick={() => fetchChunks(folder.name, 1)}
             >
-              <div className="flex items-center space-x-3">                
-                <div>
-                  <div className="font-medium">{folder.name}</div>
-                  <div className="text-sm text-gray-500">
-                    Created: {new Date(folder.created_at).toLocaleDateString()}
+              <div className="flex items-center justify-between">
+                <div 
+                  className="flex items-center space-x-3" 
+                  onClick={() => fetchChunks(folder.name, 1)}
+                >                
+                  <div>
+                    <div className="font-medium">{folder.name}</div>
+                    <div className="text-sm text-gray-500">
+                      Created: {new Date(folder.created_at).toLocaleDateString()}
+                    </div>
                   </div>
                 </div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    createEmbeddings(folder.name);
+                  }}
+                  disabled={processingFolder === folder.name}
+                  className={`px-3 py-1 text-sm rounded transition-colors ${
+                    processingFolder === folder.name
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                  }`}
+                >
+                  {processingFolder === folder.name ? (
+                    <span className="flex items-center">
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Processing...
+                    </span>
+                  ) : (
+                    'Create Embeddings'
+                  )}
+                </button>
               </div>
             </div>
           ))}
@@ -142,10 +213,15 @@ export default function ChunkViewer({ onChunkSelect }: ChunkViewerProps) {
             className="p-4 border rounded hover:shadow-lg cursor-pointer"
             onClick={() => onChunkSelect?.(chunk)}
           >
-            <div className="flex items-center space-x-2 mb-2">             
+            <div className="flex items-center justify-between mb-2">
               <div className="text-sm text-gray-500">
                 Page {chunk.metadata.page_number}
               </div>
+              {chunk.vector_store_status && (
+                <div className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                  Indexed: {new Date(chunk.vector_store_status.indexed_at).toLocaleDateString()}
+                </div>
+              )}
             </div>
             <div className="text-sm text-gray-500 mb-2">
               <div>Chapter: {chunk.metadata.chapter_number}</div>

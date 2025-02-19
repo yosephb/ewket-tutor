@@ -6,9 +6,22 @@ export interface ChunkMetadata {
   section_title?: string;
 }
 
+export interface VectorStoreStatus {
+  indexed: boolean;
+  indexed_at: string;
+}
+
+export interface VectorStoreInfo {
+  embedding: number[];
+  id: string;
+  indexed_at: string;
+}
+
 export interface Chunk {
   text: string;
   metadata: ChunkMetadata;
+  vector_store_status?: VectorStoreStatus;
+  vector_store?: VectorStoreInfo;
   source_file?: string;
 }
 
