@@ -43,3 +43,11 @@ logs/
 # Dependency directories
 backend/__pycache__/
 backend/.pytest_cache/
+backend/chroma_db/ffab0ba0-bd27-462f-b68c-e26e18a32c84/data_level0.bin
+backend/chroma_db/ffab0ba0-bd27-462f-b68c-e26e18a32c84/header.bin
+backend/chroma_db/ffab0ba0-bd27-462f-b68c-e26e18a32c84/length.bin
+backend/app/data/uploads/Bio-grade11-txtbk-unit5.pdf
+backend/app/robust4.py
+backend/chroma_db/ffab0ba0-bd27-462f-b68c-e26e18a32c84/link_lists.bin
+backend/app/__pycache__/main.cpython-39.pyc
+backend/app/__pycache__/main.cpython-39.pyc
