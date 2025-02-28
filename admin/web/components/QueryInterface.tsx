@@ -4,6 +4,7 @@ interface QueryResult {
   documents: string[];
   metadatas: any[];
   distances: number[];
+  normalized_scores?: number[];
 }
 
 interface QueryResponse {
@@ -126,12 +127,18 @@ export default function QueryInterface() {
               {results.query_results.documents.map((doc, index) => (
                 <div key={index} className="p-4 border rounded">
                   <div className="text-sm text-gray-500 mb-2">
-                    <span className="font-medium">Relevance Score: </span>
-                    {(1 - results.query_results.distances[index]).toFixed(4)}
+                    <span className="font-medium">Distance: </span>
+                    {(results.query_results.distances[index])}
+
+                    <br/>
+                    <span className="font-medium">Normalized Score: </span>
+                    {(results.query_results.normalized_scores[index])}
                   </div>
                   <div className="text-sm text-gray-500 mb-2">
                     <span className="font-medium">Metadata: </span>
                     {JSON.stringify(results.query_results.metadatas[index])}
+
+                    
                   </div>
                   <p className="text-sm">{doc}</p>
                 </div>

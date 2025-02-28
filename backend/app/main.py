@@ -297,12 +297,15 @@ async def query_documents(
             contexts=results["documents"]
         )
 
+        print(results["distances"])
+
         return {
             "status": "success",
             "query_results": {
                 "documents": results["documents"],
                 "metadatas": results["metadatas"],
-                "distances": results["distances"]
+                "distances": results["distances"],
+                "normalized_scores": results["normalized_scores"]
             },
             "llm_response": llm_response["response"]
         }

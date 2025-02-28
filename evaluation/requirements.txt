@@ -1,0 +1,8 @@
+ragas>=0.0.22
+pandas>=2.2.3
+pydantic>=2.6.0
+pdfminer.six==20240706
+langchain>=0.1.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.22
+datasets>=2.16.1 

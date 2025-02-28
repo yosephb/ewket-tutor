@@ -46,7 +46,7 @@ class LLMService:
             # Use custom temperature if provided
             if temperature is not None:
                 llm = ChatOpenAI(
-                    model="gpt-4-turbo-preview",
+                    model="gpt-4o",
                     temperature=temperature,
                     openai_api_key=self.api_key
                 )

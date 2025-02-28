@@ -1,0 +1,45 @@
+{
+  "traditional_metrics": {
+    "mrr": 0.0,
+    "recall@5": 0.0
+  },
+  "ragas_metrics": {
+    "contextprecision": 0.0,
+    "answerrelevancy": 0.0,
+    "faithfulness": 0.0,
+    "contextrecall": 0.0
+  },
+  "config": {
+    "model": {
+      "llm": "gpt-4-turbo-preview",
+      "embedding": "multi-qa-mpnet-base-dot-v1"
+    },
+    "chunking": {
+      "max_chunk_size": 3500,
+      "overlap": 350
+    },
+    "vector_store": {
+      "type": "chromadb",
+      "host": "localhost",
+      "port": 8000
+    },
+    "evaluation": {
+      "n_samples": 100,
+      "metrics": {
+        "traditional": [
+          "mrr",
+          "recall@k"
+        ],
+        "ragas": [
+          "context_relevancy",
+          "answer_relevancy",
+          "faithfulness"
+        ]
+      }
+    }
+  },
+  "evaluation_details": {
+    "num_samples": 1,
+    "timestamp": "2025-02-19T02:03:05.412571"
+  }
+}

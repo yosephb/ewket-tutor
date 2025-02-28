@@ -1,0 +1,23 @@
+model:
+  llm: "gpt-4-turbo-preview"
+  embedding: "multi-qa-mpnet-base-dot-v1"
+  
+chunking:
+  max_chunk_size: 3500
+  overlap: 350
+  
+vector_store:
+  type: "chromadb"
+  host: "localhost"
+  port: 8000
+  
+evaluation:
+  n_samples: 100
+  metrics:
+    traditional:
+      - "mrr"
+      - "recall@k"
+    ragas:
+      - "context_relevancy"
+      - "answer_relevancy"
+      - "faithfulness"
