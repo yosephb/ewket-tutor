@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 interface QueryResult {
+  chunk_ids: string[];
   documents: string[];
   metadatas: any[];
   distances: number[];
@@ -127,6 +128,9 @@ export default function QueryInterface() {
               {results.query_results.documents.map((doc, index) => (
                 <div key={index} className="p-4 border rounded">
                   <div className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium">Chunk ID: </span>
+                    {results.query_results.chunk_ids[index]}
+                    <br/> 
                     <span className="font-medium">Distance: </span>
                     {(results.query_results.distances[index])}
 

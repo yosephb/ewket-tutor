@@ -6,6 +6,7 @@ import asyncio
 import json
 from datetime import datetime
 import sys
+import requests
 
 # Add backend to Python path
 backend_path = Path(__file__).parent.parent.parent / 'backend'
@@ -20,7 +21,7 @@ from ..metrics.ragas_metrics import RagasEvaluator
 logger = logging.getLogger(__name__)
 
 class RAGEvaluator:
-    def __init__(self, config_path: Optional[Path] = None):
+    def __init__(self, config_path: Optional[Path] = None, api_url: str = "http://localhost:8000/api/admin/documents/query"):
         # Use default config path if none provided
         self.config_path = config_path or Path(__file__).parent.parent / "configs" / "default.yaml"
         self.config = self._load_config(self.config_path)
@@ -32,6 +33,7 @@ class RAGEvaluator:
             self.traditional_metrics = RetrievalMetrics()
             self.ragas_metrics = RagasEvaluator()
             self.dataset = MSMarcoDataset()
+            self.api_url = api_url
         except Exception as e:
             logger.error(f"Error initializing services: {str(e)}")
             raise
@@ -125,47 +127,18 @@ async def main():
     evaluator = RAGEvaluator()
     results = await evaluator.evaluate()
     
-    logger.info("Attempting to save results...")
-    try:
-        # Get current working directory
-        cwd = Path.cwd()
-        logger.debug(f"Current working directory: {cwd}")
-        
-        # Build results path
-        results_dir = Path("evaluation/results").resolve()
-        logger.debug(f"Resolved results directory: {results_dir}")
-        
-        # Create directory if needed
-        logger.debug(f"Does directory exist? {results_dir.exists()}")
-        results_dir.mkdir(parents=True, exist_ok=True)
-        logger.info(f"Created directory: {results_dir}")
-        
-        # Create filename with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        results_file = results_dir / f"evaluation_results_{timestamp}.json"
-        logger.debug(f"Target file path: {results_file}")
-        
-        # Verify write permissions
-        test_file = results_dir / "write_test.txt"
-        try:
-            with open(test_file, "w") as f:
-                f.write("test")
-            test_file.unlink()
-            logger.debug("Write permissions verified")
-        except Exception as e:
-            logger.error(f"Write permission test failed: {str(e)}")
-            raise
-        
-        # Save results
-        with open(results_file, 'w') as f:
-            json.dump(results, f, indent=2)
-            logger.debug(f"Results JSON size: {len(json.dumps(results))} bytes")
-        
-        logger.info(f"Successfully saved results to: {results_file}")
-        logger.info(f"File exists? {results_file.exists()}")
-        logger.info(f"File size: {results_file.stat().st_size} bytes")
-        
-    except Exception as e:
-        logger.error(f"Failed to save results: {str(e)}", exc_info=True)
-        raise
+    # Save results
+    results_dir = Path("evaluation/results")
+    results_dir.mkdir(exist_ok=True)
+    
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    results_file = results_dir / f"evaluation_results_{timestamp}.json"
+    
+    with open(results_file, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    logger.info(f"Evaluation results saved to: {results_file}")
+    logger.info(f"Summary:\nTraditional Metrics: {results['traditional_metrics']}\nRAGAS Metrics: {results['ragas_metrics']}")
 
+if __name__ == "__main__":
+    asyncio.run(main())

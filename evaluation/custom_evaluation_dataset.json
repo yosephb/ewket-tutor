@@ -1,0 +1,127 @@
+[
+    {
+        "query": "What is the primary function of red blood cells?",
+        "gold_answer": "Red blood cells transport oxygen from the lungs to body tissues and remove carbon dioxide.",
+        "gold_chunks": ["chunk_007"]
+    },
+    {
+        "query": "How do ligaments differ from tendons in function?",
+        "gold_answer": "Ligaments connect bones to bones, while tendons attach muscles to bones.",
+        "gold_chunks": ["chunk_015"]
+    },
+    {
+        "query": "Describe the process of muscle contraction in skeletal muscles.",
+        "gold_answer": "Muscle contraction occurs when actin and myosin filaments interact, driven by ATP and calcium ions.",
+        "gold_chunks": ["chunk_022"]
+    },
+    {
+        "query": "What role does calcium play in bone development?",
+        "gold_answer": "Calcium provides structural strength to bones and is regulated by hormones like PTH and calcitonin.",
+        "gold_chunks": ["chunk_029"]
+    },
+    {
+        "query": "How is oxygen transported in the human bloodstream?",
+        "gold_answer": "Oxygen binds to hemoglobin in red blood cells and is carried to body tissues through circulation.",
+        "gold_chunks": ["chunk_034"]
+    },
+    {
+        "query": "Which hormone regulates blood sugar levels?",
+        "gold_answer": "Insulin and glucagon, secreted by the pancreas, regulate blood sugar levels.",
+        "gold_chunks": ["chunk_038"]
+    },
+    {
+        "query": "Explain the role of the kidney in waste removal.",
+        "gold_answer": "The kidneys filter waste from the blood, regulate fluid balance, and excrete waste as urine.",
+        "gold_chunks": ["chunk_041"]
+    },
+    {
+        "query": "What are the major components of the human circulatory system?",
+        "gold_answer": "The circulatory system consists of the heart, blood vessels, and blood.",
+        "gold_chunks": ["chunk_044"]
+    },
+    {
+        "query": "How does the nervous system control body movement?",
+        "gold_answer": "The nervous system sends electrical signals through neurons to coordinate voluntary and involuntary movements.",
+        "gold_chunks": ["chunk_048"]
+    },
+    {
+        "query": "What are the functions of the liver in metabolism?",
+        "gold_answer": "The liver processes nutrients, detoxifies chemicals, and regulates metabolism.",
+        "gold_chunks": ["chunk_052"]
+    },
+    {
+        "query": "Describe the process of food digestion in the stomach.",
+        "gold_answer": "The stomach secretes acid and enzymes to break down food before it enters the intestines.",
+        "gold_chunks": ["chunk_055"]
+    },
+    {
+        "query": "How do vaccines help the immune system fight diseases?",
+        "gold_answer": "Vaccines stimulate an immune response by introducing weakened or inactive pathogens.",
+        "gold_chunks": ["chunk_060"]
+    },
+    {
+        "query": "Which part of the brain controls voluntary movements?",
+        "gold_answer": "The cerebrum, specifically the motor cortex, controls voluntary movements.",
+        "gold_chunks": ["chunk_065"]
+    },
+    {
+        "query": "What is the function of the alveoli in the respiratory system?",
+        "gold_answer": "Alveoli facilitate gas exchange by allowing oxygen to enter the bloodstream and removing carbon dioxide.",
+        "gold_chunks": ["chunk_068"]
+    },
+    {
+        "query": "How does insulin regulate blood glucose levels?",
+        "gold_answer": "Insulin helps cells absorb glucose from the bloodstream, reducing blood sugar levels.",
+        "gold_chunks": ["chunk_072"]
+    },
+    {
+        "query": "Which organ in the body filters blood and removes waste?",
+        "gold_answer": "The kidneys filter blood, removing waste and balancing fluids.",
+        "gold_chunks": ["chunk_075"]
+    },
+    {
+        "query": "Describe the major phases of mitosis.",
+        "gold_answer": "Mitosis consists of prophase, metaphase, anaphase, and telophase.",
+        "gold_chunks": ["chunk_078"]
+    },
+    {
+        "query": "What is the function of hemoglobin in red blood cells?",
+        "gold_answer": "Hemoglobin binds oxygen in red blood cells and transports it to body tissues.",
+        "gold_chunks": ["chunk_080"]
+    },
+    {
+        "query": "Explain the differences between the sympathetic and parasympathetic nervous systems.",
+        "gold_answer": "The sympathetic nervous system activates fight-or-flight responses, while the parasympathetic system promotes rest and digestion.",
+        "gold_chunks": ["chunk_082"]
+    },
+    {
+        "query": "How do antibiotics work to fight bacterial infections?",
+        "gold_answer": "Antibiotics kill bacteria or inhibit their growth by targeting bacterial structures or functions.",
+        "gold_chunks": ["chunk_085"]
+    },
+    {
+        "query": "Which vitamin is essential for blood clotting?",
+        "gold_answer": "Vitamin K is essential for the production of blood clotting factors.",
+        "gold_chunks": ["chunk_088"]
+    },
+    {
+        "query": "What is the function of the endocrine system?",
+        "gold_answer": "The endocrine system regulates body functions through hormone secretion.",
+        "gold_chunks": ["chunk_091"]
+    },
+    {
+        "query": "How do the lungs facilitate gas exchange in the body?",
+        "gold_answer": "Oxygen diffuses from the alveoli into capillaries while carbon dioxide diffuses out.",
+        "gold_chunks": ["chunk_094"]
+    },
+    {
+        "query": "Describe the process of fertilization in human reproduction.",
+        "gold_answer": "Fertilization occurs when a sperm cell fuses with an egg cell in the fallopian tube.",
+        "gold_chunks": ["chunk_097"]
+    },
+    {
+        "query": "What is the role of estrogen in the female reproductive system?",
+        "gold_answer": "Estrogen regulates the menstrual cycle and promotes the development of female secondary sexual characteristics.",
+        "gold_chunks": ["chunk_100"]
+    }
+]

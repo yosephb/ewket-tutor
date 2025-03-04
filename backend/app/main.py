@@ -285,7 +285,7 @@ async def query_documents(
         results = await vector_store.query(
             query_text=query,
             filters=filters if filters else None,
-            n_results=n_results
+            n_results=n_results           
         )
 
         # Initialize LLM service
@@ -297,7 +297,7 @@ async def query_documents(
             contexts=results["documents"]
         )
 
-        print(results["distances"])
+        print(results["chunk_ids"])
 
         return {
             "status": "success",
@@ -305,7 +305,8 @@ async def query_documents(
                 "documents": results["documents"],
                 "metadatas": results["metadatas"],
                 "distances": results["distances"],
-                "normalized_scores": results["normalized_scores"]
+                "normalized_scores": results["normalized_scores"],
+                "chunk_ids": results["chunk_ids"]
             },
             "llm_response": llm_response["response"]
         }

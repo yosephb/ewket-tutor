@@ -9,6 +9,7 @@ export interface ChunkMetadata {
 export interface VectorStoreStatus {
   indexed: boolean;
   indexed_at: string;
+  embedding_id: string;
 }
 
 export interface VectorStoreInfo {
@@ -23,6 +24,7 @@ export interface Chunk {
   vector_store_status?: VectorStoreStatus;
   vector_store?: VectorStoreInfo;
   source_file?: string;
+  chunk_id?: string;
 }
 
 export interface ExtractionFolder {

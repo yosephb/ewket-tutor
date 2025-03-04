@@ -6,6 +6,8 @@ from typing import List, Dict, Optional
 import logging
 import numpy as np
 from scipy.special import softmax  # Softmax for better ranking
+import json
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -102,12 +104,15 @@ class VectorStore:
             
             documents = results["documents"][0]
             metadatas = results["metadatas"][0]
+            chunk_ids = results["ids"][0] 
+
+           
 
 
             retrieved_chunks = []
             for i in range(len(documents)):
                 retrieved_chunks.append({
-                    "chunk_id": i,
+                    "chunk_id": chunk_ids[i],
                     "text": documents[i],
                     "retrieved_score": normalized_scores[i],
                     "metadata": metadatas[i]})
@@ -116,7 +121,10 @@ class VectorStore:
 
             print('Final Filtered Scores:', [chunk["retrieved_score"] for chunk in filtered_chunks])
 
+        
+
             return {
+                "chunk_ids": [chunk["chunk_id"] for chunk in filtered_chunks],
                 "documents": [chunk["text"] for chunk in filtered_chunks],
                 "metadatas": [chunk["metadata"] for chunk in filtered_chunks],
                 "distances": distances.tolist(),  # Original distances for debugging
@@ -127,5 +135,20 @@ class VectorStore:
         except Exception as e:
             logger.error(f"Error querying vector store: {str(e)}")
             raise
+
+    def export_collection(self, output_path: Path) -> None:
+        """Export collection data to JSON file."""
+        data = {
+            "ids": self.collection.get()["ids"],
+            "documents": self.collection.get()["documents"],
+            "metadatas": self.collection.get()["metadatas"],
+            "embeddings": self.collection.get()["embeddings"]
+        }
+        with open(output_path, 'w') as f:
+            json.dump(data, f, indent=2)
+
+    def delete_collection(self) -> None:
+        """Delete the current collection."""
+        self.client.delete_collection(self.collection.name)
 
 

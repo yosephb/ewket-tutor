@@ -216,6 +216,8 @@ export default function ChunkViewer({ onChunkSelect }: ChunkViewerProps) {
             <div className="flex items-center justify-between mb-2">
               <div className="text-sm text-gray-500">
                 Page {chunk.metadata.page_number}
+                <br/>
+                Chunk ID: {chunk.vector_store_status?.embedding_id}  
               </div>
               {chunk.vector_store_status && (
                 <div className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">

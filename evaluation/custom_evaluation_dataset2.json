@@ -1,0 +1,326 @@
+[
+	{
+		"query": "What does the musculoskeletal system consist of?",
+		"gold_answer": "The musculoskeletal system is a body structure made up of bones of the skeleton, muscles, cartilage, tendons, ligaments, joints, and connective tissues.",
+		"gold_chunks": [
+			"unknown_grade_unknown_2"
+		]
+	},
+	{
+		"query": "How many muscles are in the human muscular system?",
+		"gold_answer": "The human muscular systems include about 700 muscles that make up half of the human body weight and are responsible for the movement of the human body.",
+		"gold_chunks": [
+			"unknown_grade_unknown_2"
+		]
+	},
+	{
+		"query": "What is the CD4 count in people with AIDS?",
+		"gold_answer": "People at the AIDS stage have a CD4 count of fewer than 200 cells/mm3. In comparison, a healthy immune system's CD4 counts are between 500 and 1600 cells/mm3.",
+		"gold_chunks": [
+			"unknown_grade_unknown_37"
+		]
+	},
+	{
+		"query": "Where is smooth muscle found in the eyes?",
+		"gold_answer": "In the eyes, smooth muscles are found in the ciliary muscles, which control accommodation of the lens.",
+		"gold_chunks": [
+			"unknown_grade_unknown_4"
+		]
+	},
+	{
+		"query": "What is troponin and what is its role in muscle contraction?",
+		"gold_answer": "Troponin is a complex system of three regulatory proteins integral to muscle contraction in skeletal muscles. In a relaxed muscle, tropomyosin blocks the attachment site for the myosin cross bridge, preventing contraction. When calcium binds with troponin, it allows actin and myosin to bind, causing cross bridge formation and muscle contraction.",
+		"gold_chunks": [
+			"unknown_grade_unknown_6"
+		]
+	},
+	{
+		"query": "What happens during muscle relaxation?",
+		"gold_answer": "Relaxation occurs when stimulation of the nerve stops and calcium is pumped back into the sarcoplasmic reticulum, breaking the link between actin and myosin. Actin and myosin return to an unbound state, causing the muscle to relax. However, relaxation failure can occur if ATP is no longer available.",
+		"gold_chunks": [
+			"unknown_grade_unknown_6"
+		]
+	},
+	{
+		"query": "What are the four types of cells that compose bones?",
+		"gold_answer": "Bones are composed of four types of cells: 1) Osteoblasts, which are involved in new bone formation; 2) Osteocytes, which are mature bone cells that help to mature bones of newborns; 3) Osteoclasts, which break down bones and help them form into correct shapes; and 4) Osteoprogenitor cells, which are important in repair of fracture.",
+		"gold_chunks": [
+			"unknown_grade_unknown_7"
+		]
+	},
+	{
+		"query": "What is the axial skeleton composed of?",
+		"gold_answer": "The axial skeleton consists of the skull, trunk, and pelvis bones of the medial core of the body.",
+		"gold_chunks": [
+			"unknown_grade_unknown_8"
+		]
+	},
+	{
+		"query": "What is the function of the saddle joint?",
+		"gold_answer": "The saddle joint enables movement back and forth, side to side, but cannot rotate. An example is the joint at the base of the thumb.",
+		"gold_chunks": [
+			"unknown_grade_unknown_10"
+		]
+	},
+	{
+		"query": "How does an erection occur?",
+		"gold_answer": "An erection is the stiffening of the penis caused by sexual arousal and/or physical stimulation. It occurs when there is an increased flow of blood into the corpus cavernosa and corpus spongiosum. During an erection, arteries supplying the erectile tissues dilate (widen), causing the penis to engorge (fill) with blood. The engorgement compresses the veins through which blood usually exits the penis, which 'traps' the blood and helps sustain the erection.",
+		"gold_chunks": [
+			"unknown_grade_unknown_13"
+		]
+	},
+	{
+		"query": "What are the functions of the ovaries?",
+		"gold_answer": "The ovaries are small, oval-shaped glands located on either side of the uterus. The ovaries produce eggs and hormones, particularly estrogen and progesterone.",
+		"gold_chunks": [
+			"unknown_grade_unknown_15"
+		]
+	},
+	{
+		"query": "What is spermatogenesis?",
+		"gold_answer": "Spermatogenesis is the process by which haploid (n) spermatozoa develop from germ cells in the seminiferous tubules of the testis. Male gamete production starts at puberty and takes place in the testis. It involves successive mitotic and meiotic divisions of primordial germ cells to produce sperms.",
+		"gold_chunks": [
+			"unknown_grade_unknown_17"
+		]
+	},
+	{
+		"query": "What happens during the menstruation phase of the menstrual cycle?",
+		"gold_answer": "In the menstruation phase, if fertilization does not occur, the corpus luteum degenerates, estrogen and progesterone levels drop, and it forms corpus albinos after two weeks. The endometrium is not maintained longer and its layer is eliminated from the body as menstrual blood or period.",
+		"gold_chunks": [
+			"unknown_grade_unknown_19"
+		]
+	},
+	{
+		"query": "What is the role of Luteinizing Hormone (LH) in men?",
+		"gold_answer": "In men, Luteinizing Hormone (LH) stimulates cells in the testes to produce testosterone to support sperm production.",
+		"gold_chunks": [
+			"unknown_grade_unknown_21"
+		]
+	},
+	{
+		"query": "What are the signs and symptoms of pregnancy?",
+		"gold_answer": "The signs and symptoms of pregnancy include missed periods, tender breasts, morning sickness (nausea, vomiting), hunger, frequent urination, and a positive pregnancy test confirms pregnancy.",
+		"gold_chunks": [
+			"unknown_grade_unknown_23"
+		]
+	},
+	{
+		"query": "How does a diaphragm contraceptive work?",
+		"gold_answer": "A diaphragm is a small and soft silicon dome placed inside the vagina to stop sperm from entering the uterus. It forms a physical barrier between the man's sperm and the woman's egg, similar to how a condom works.",
+		"gold_chunks": [
+			"unknown_grade_unknown_25"
+		]
+	},
+	{
+		"query": "How does an intrauterine device (IUD) prevent pregnancy?",
+		"gold_answer": "The copper-coated intrauterine device (IUD) is a small T-shaped device made from material containing progesterone hormone or copper. When fitted inside a woman's uterus, it does not allow sperm to fertilize the egg and prevents pregnancy. It may also make it harder for a fertilized egg to implant in the uterus as it thickens the cervical mucus and thins the uterine lining.",
+		"gold_chunks": [
+			"unknown_grade_unknown_26"
+		]
+	},
+	{
+		"query": "What are the symptoms of male infertility?",
+		"gold_answer": "Symptoms of male infertility include: immotile sperms that have difficulty swimming to the egg; discomfort, pain, swelling or a lump in the testicle area; complications following surgery of the groin, testicle, prostate, penis, or scrotum; and lower sperm count (fewer than 15 million sperm per milliliter of semen or a total sperm count of less than 39 million per ejaculate).",
+		"gold_chunks": [
+			"unknown_grade_unknown_31"
+		]
+	},
+	{
+		"query": "What are the stages of syphilis development?",
+		"gold_answer": "Syphilis develops through four stages: 1) Primary syphilis: 3-4 weeks after exposure, formation of non-itchy and painless chancers on genital skin and mucosa; 2) Secondary syphilis: 4-8 weeks after the appearance of a primary chancer, rash on hands and soles of feet; 3) Latent syphilis: Early (<1 year) or late (>1 year) after infection, no symptoms (asymptomatic); 4) Tertiary/late syphilis: 1-10 years after infection, gummatous lesions, cardiovascular syphilis, late neurological complications.",
+		"gold_chunks": [
+			"unknown_grade_unknown_33"
+		]
+	},
+	{
+		"query": "What is genital herpes and what causes it?",
+		"gold_answer": "Genital herpes is a sexually transmitted infection caused by two types of the herpes simplex virus (HSV). HSV-1 is a virus that affects the mouth and spreads through saliva or a herpes-related sore around the mouth. HSV-2 affects the genital, anal, and mouth areas and is transmitted through sexual intercourse.",
+		"gold_chunks": [
+			"unknown_grade_unknown_35"
+		]
+	},
+	{
+		"query": "What is the function of cardiac muscle?",
+		"gold_answer": "The cardiac muscle forms the myocardium, which is the thick middle layer of the heart wall between the outer layer (pericardium) and the inner layer (endocardium). It is an involuntary striated muscle that is responsible for the contraction of the heart.",
+		"gold_chunks": [
+			"unknown_grade_unknown_3"
+		]
+	},
+	{
+		"query": "Where are cardiac muscles found in the human body?",
+		"gold_answer": "Cardiac muscles are found in the wall of the heart, forming the myocardium, which is the thick middle layer between the outer layer (pericardium) and inner layer (endocardium) of the heart wall.",
+		"gold_chunks": [
+			"unknown_grade_unknown_3"
+		]
+	},
+	{
+		"query": "Describe the characteristics and locations of smooth muscles in the body.",
+		"gold_answer": "Smooth muscles are involuntary, non-striated muscles that are unconsciously controlled. They are found in the walls of hollow organs such as the stomach, intestine, bladder, uterus, and in the walls of passageways including blood vessels, lymph vessels, respiratory tracts, urinary and reproductive systems, and in the eyes as ciliary muscles.",
+		"gold_chunks": [
+			"unknown_grade_unknown_4"
+		]
+	},
+	{
+		"query": "Explain the sequence of events that occurs during muscle contraction.",
+		"gold_answer": "Muscle contraction occurs through the following sequence: 1) Muscle activation begins when a motor nerve stimulates an action potential to pass down a neuron to the neuromuscular junction, stimulating the sarcoplasmic reticulum to release calcium into the muscle cell. 2) Calcium floods into the muscle cells and binds with troponin, allowing actin and myosin to bind. The actin and myosin cross bridges bind and contract, using ATP as energy. 3) ATP is re-synthesized, allowing actin and myosin to maintain a strong binding state. 4) Relaxation occurs when nerve stimulation stops and calcium is pumped back into the sarcoplasmic reticulum, breaking the link between actin and myosin.",
+		"gold_chunks": [
+			"unknown_grade_unknown_6"
+		]
+	},
+	{
+		"query": "What are the three types of muscle contractions and how do they differ?",
+		"gold_answer": "There are three types of muscle contractions: 1) Isometric contraction, which does not change the length of the muscle; 2) Concentric contraction, which shortens the muscle; and 3) Eccentric contraction, which lengthens the muscle fibers.",
+		"gold_chunks": [
+			"unknown_grade_unknown_7"
+		]
+	},
+	{
+		"query": "How many bones are in the adult human skeleton and how does this compare to the number at birth?",
+		"gold_answer": "The average adult human skeleton has 206 bones. Humans are born with over 300 bones, but many bones fuse between birth and the end of maturity, resulting in the lower number in adults.",
+		"gold_chunks": [
+			"unknown_grade_unknown_7"
+		]
+	},
+	{
+		"query": "Describe the different types of bones based on their shapes and give examples.",
+		"gold_answer": "Based on their shapes, there are four main types of bones: 1) Long bones have long and thin shapes, like the femur and tibia; 2) Short bones have squat and cubed shapes, like the carpus (wrist bones); 3) Flat bones have flattened and broad surfaces, including the cranium (skull), ilium (pelvis), sternum, and ribs; 4) Irregular bones have shapes that don't conform to the other types, including vertebrae, sacrum, coccyx, temporal, mandible, palatine, and nasal bones. There are also sesamoid bones, which are small, flat bones shaped like sesame seeds and embedded in muscles.",
+		"gold_chunks": [
+			"unknown_grade_unknown_7",
+			"unknown_grade_unknown_8"
+		]
+	},
+	{
+		"query": "What are the main functions of the skeletal system?",
+		"gold_answer": "The main functions of the skeletal system are: 1) Supporting the body and helping movement by providing stability and preventing collapse; 2) Protecting internal organs from injury (e.g., ribs protect the heart and lungs, skull protects the brain); 3) Producing blood cells (platelets, red and white blood cells) in the bone marrow; 4) Storing and releasing fat when the body needs energy; 5) Storing and releasing essential minerals like calcium, phosphorus, and vitamin D when needed.",
+		"gold_chunks": [
+			"unknown_grade_unknown_8"
+		]
+	},
+	{
+		"query": "What is the difference between the axial and appendicular skeleton?",
+		"gold_answer": "The axial skeleton consists of the skull, trunk, and pelvis bones of the medial core of the body. The appendicular skeleton consists of 126 bones out of the total 206 bones and includes the limbs, shoulder-supporting girdle, pectoral girdle, pelvic girdle, and joined appendages. The appendicular skeleton is involved in locomotion of lower limbs and manipulation of objects in the upper limbs.",
+		"gold_chunks": [
+			"unknown_grade_unknown_8",
+			"unknown_grade_unknown_9"
+		]
+	},
+	{
+		"query": "Describe the different types of joints in the human body and their functions.",
+		"gold_answer": "There are six main types of joints in the human body: 1) Ball and socket joints where the rounded head of one bone sits in the cup of another bone, permitting movement in all directions (e.g., shoulder and hip joints); 2) Hinge joints that open and close in one direction along one plane only (e.g., elbow and knee joints); 3) Condyloid joints that do not rotate but allow movements (e.g., finger and jaw joints); 4) Pivot joints where one bone swivels in a ring (e.g., joints in the ulna, radius, and neck); 5) Gliding joints that allow only limited movement by slipping smooth surfaces over one another (e.g., wrist joint); 6) Saddle joints that enable movement back and forth, side to side, but cannot rotate (e.g., thumb base).",
+		"gold_chunks": [
+			"unknown_grade_unknown_10"
+		]
+	},
+	{
+		"query": "What are the main components and functions of the male reproductive system?",
+		"gold_answer": "The male reproductive system contains external genital organs (penis, testes, and scrotum) and internal parts (prostate gland, vas deferens, and urethra). Its functions include producing sperm (male gametes), producing male sex hormones (particularly testosterone), and producing other components of semen. The penis has urinary and sexual functions, involved in erection and ejaculation. The scrotum protects the testes and controls their temperature for sperm production. The testes produce both sperm and testosterone.",
+		"gold_chunks": [
+			"unknown_grade_unknown_12",
+			"unknown_grade_unknown_13"
+		]
+	},
+	{
+		"query": "What structures make up the female reproductive system and what are their functions?",
+		"gold_answer": "The female reproductive system includes external genital organs and internal reproductive organs. The external structures include the labia majora, labia minora, Bartholin's glands, and clitoris. The internal organs include the vagina (birth canal), uterus (home to a developing fetus), ovaries (produce eggs and hormones), and fallopian tubes (pathways for eggs to travel from ovaries to uterus and usually the site of fertilization). The system's functions include producing gametes (eggs), secreting sex hormones (such as estrogen), providing a site for fertilization, gestating a fetus if fertilization occurs, and giving birth.",
+		"gold_chunks": [
+			"unknown_grade_unknown_14",
+			"unknown_grade_unknown_15"
+		]
+	},
+	{
+		"query": "What is gametogenesis and how does it differ between males and females?",
+		"gold_answer": "Gametogenesis is the process of formation and development of specialized generative cells or gametes (oocytes/sperm) from bipotential primordial germ cells. It involves forming haploid daughter cells (n) from diploid mother cells (2n) through meiosis. In males, this process is called spermatogenesis, which produces spermatozoa in the testes. In females, it's called oogenesis, which produces ova in the ovaries. Spermatogenesis continuously produces millions of sperm cells from puberty, while oogenesis produces a limited number of eggs that develop during embryogenesis and are released one at a time during the reproductive years.",
+		"gold_chunks": [
+			"unknown_grade_unknown_16",
+			"unknown_grade_unknown_17"
+		]
+	},
+	{
+		"query": "Describe the menstrual cycle and its phases.",
+		"gold_answer": "The menstrual cycle is the monthly process of changes in the female reproductive system from puberty to menopause, involving discharge of blood through the vagina when fertilization doesn't occur. It includes changes in the ovary and uterine walls due to hormonal fluctuations. The cycle averages 28 days and includes four phases: 1) Follicular phase (days 5-13): when follicles mature and endometrium develops, stimulated by FSH; 2) Ovulation phase (days 12-14): when an egg is released from the ovary, triggered by LH; 3) Luteal phase (days 15-28): when the ruptured follicle becomes the corpus luteum and secretes progesterone to prepare the endometrium for possible pregnancy; 4) Menstruation phase (days 1-4): when the endometrium is shed if fertilization doesn't occur.",
+		"gold_chunks": [
+			"unknown_grade_unknown_18",
+			"unknown_grade_unknown_19",
+			"unknown_grade_unknown_20"
+		]
+	},
+	{
+		"query": "How do hormones regulate the menstrual cycle?",
+		"gold_answer": "Hormones regulate the menstrual cycle through positive and negative feedback mechanisms. The cycle begins with the anterior pituitary producing Follicle Stimulating Hormone (FSH), which stimulates follicle growth. As follicles grow, they produce increasing amounts of estrogen. Around days 12-14, estrogen levels peak, creating positive feedback that stimulates the anterior pituitary to release Luteinizing Hormone (LH), triggering ovulation. After ovulation, the ruptured follicle becomes the corpus luteum, which produces progesterone and some estrogen. These hormones thicken the endometrium and inhibit FSH and LH through negative feedback. If fertilization doesn't occur, the corpus luteum degenerates, hormone levels drop, and the endometrium sheds as menstruation.",
+		"gold_chunks": [
+			"unknown_grade_unknown_19",
+			"unknown_grade_unknown_21",
+			"unknown_grade_unknown_22"
+		]
+	},
+	{
+		"query": "What is fertilization and how does it occur?",
+		"gold_answer": "Fertilization is the union of a human egg and sperm cell in the ampulla of the fallopian tube to produce a zygote. It occurs when 23 sets of chromosomes from a spermatozoon fuse with 23 sets of chromosomes from an egg cell. After fertilization, the zygote divides repeatedly as it moves down the fallopian tube toward the uterus. About six days after fertilization, the embryo attaches to the lining of the uterus (implantation), usually near the top. Implantation is completed within nine or ten days.",
+		"gold_chunks": [
+			"unknown_grade_unknown_23"
+		]
+	},
+	{
+		"query": "What contraceptive methods are available and how do they work?",
+		"gold_answer": "Contraceptive methods can be categorized as barrier or non-barrier methods. Barrier methods include male and female condoms, diaphragms, and cervical caps, which provide a physical barrier between sperm and egg. Condoms also help prevent sexually transmitted infections. Non-barrier methods include: spermicides (chemicals that kill sperm); oral contraceptive pills (containing estrogen and progesterone to prevent ovulation and thicken cervical mucus); intrauterine devices (IUDs) that prevent fertilization and implantation; hormonal implants that release progesterone; contraceptive injections containing synthetic progesterone; emergency contraception pills for use after unprotected sex; contraceptive rings that release hormones; and permanent sterilization procedures (tubal ligation for women and vasectomy for men).",
+		"gold_chunks": [
+			"unknown_grade_unknown_24",
+			"unknown_grade_unknown_25",
+			"unknown_grade_unknown_26",
+			"unknown_grade_unknown_27"
+		]
+	},
+	{
+		"query": "What are the causes of infertility in women and men?",
+		"gold_answer": "Female infertility can be caused by: thyroid problems that prevent ovulation; pelvic surgery complications affecting fallopian tubes; cervical mucus problems preventing sperm movement; fibroids (non-cancerous growths in the womb); endometriosis (growths in the womb lining); pelvic inflammatory diseases; sterilization; and use of certain medicines and drugs. Male infertility is caused by: production of low, abnormal, or dysfunctional sperm; blockages preventing sperm delivery; chronic health problems; illnesses or injuries; inherited disorders; hormonal imbalances; and dilated veins around the testicle. Risk factors include smoking, alcohol and drug use, being overweight, exposure to toxins, overheating the testicles, and having repeated STD infections.",
+		"gold_chunks": [
+			"unknown_grade_unknown_30",
+			"unknown_grade_unknown_31"
+		]
+	},
+	{
+		"query": "What are the major sexually transmitted infections and their characteristics?",
+		"gold_answer": "Major sexually transmitted infections (STIs) include bacterial infections (bacterial vaginosis, chlamydia, syphilis, gonorrhea, chancroid), viral infections (genital herpes, genital warts caused by HPV, molluscum contagiosum, HIV, hepatitis B), and parasitic infections (pubic lice, trichomoniasis, scabies). These infections spread primarily through sexual contact and can cause various symptoms depending on the pathogen. Some, like syphilis, progress through different stages if untreated. Many STIs can be prevented through protective sexual practices like using condoms. Treatment options vary based on the pathogen, with bacterial infections typically treatable with antibiotics, while viral infections may be managed but not always cured.",
+		"gold_chunks": [
+			"unknown_grade_unknown_32",
+			"unknown_grade_unknown_33",
+			"unknown_grade_unknown_35",
+			"unknown_grade_unknown_36",
+			"unknown_grade_unknown_38",
+			"unknown_grade_unknown_39"
+		]
+	},
+	{
+		"query": "What is HIV/AIDS and how does it progress?",
+		"gold_answer": "Human Immunodeficiency Virus (HIV) is a retrovirus that attacks the human immune system, particularly CD4 helper cells (T cells), making a person vulnerable to other infections. HIV infection progresses through three stages: 1) Acute HIV infection (2-4 weeks after infection): flu-like symptoms appear as HIV multiplies rapidly and spreads throughout the body; 2) Chronic HIV infection (1-7 years): also called asymptomatic HIV infection or clinical latency, when HIV continues to multiply but with fewer symptoms; 3) AIDS (Acquired Immunodeficiency Syndrome): the final and most severe stage when HIV severely damages the immune system, CD4 count drops below 200 cells/mm3, and the body cannot fight opportunistic infections. Without treatment, people with AIDS typically survive about 3 years.",
+		"gold_chunks": [
+			"unknown_grade_unknown_36",
+			"unknown_grade_unknown_37"
+		]
+	},
+	{
+		"query": "What is family planning and what are its benefits?",
+		"gold_answer": "Family planning is the ability to anticipate and attain a desired number of children and the spacing and timing of births. It deals with issues related to marital situation, career considerations, financial position, and ensuring the resources required for raising children (time, social, financial, and environmental conditions). Family planning helps prevent unwanted pregnancies, protects against STIs, provides counseling and fertility management, and helps couples wait an appropriate time between pregnancies. Benefits include reduced maternal health risks, prevention of complications from early or late motherhood, prevention of illness that could threaten the whole family, and reduced complications from pregnancy and childbirth.",
+		"gold_chunks": [
+			"unknown_grade_unknown_43",
+			"unknown_grade_unknown_44"
+		]
+	},
+	{
+		"query": "What are harmful traditional practices that affect reproductive health?",
+		"gold_answer": "Harmful traditional practices that affect reproductive health include: 1) Early marriage - forcing underage girls to marry based on cultural norms, causing them to drop out of school, become pregnant, and face long-term health risks; 2) Kidnapping or abduction to force a girl into unwilling marriage; 3) Gender-based violence, unwanted sexual contact, sexual abuse or harassment, including violence within relationships or marriages; 4) Female Genital Mutilation (FGM) - the partial or total removal of external female genital organs. In Ethiopia, FGM accounts for 73% of harmful traditional practices.",
+		"gold_chunks": [
+			"unknown_grade_unknown_42"
+		]
+	},
+	{
+		"query": "How do alcohol, khat, and drug use affect health?",
+		"gold_answer": "Alcohol use damages the brain (causing dementia and vitamin deficiencies), liver (causing cirrhosis), and cardiovascular system. Heavy drinking can cause J-shaped legs, colorectal and colon cancer, violence, traffic accidents, and death. Alcohol is also associated with risky sex and HIV transmission. Khat (containing cathinone) causes hypertension, stomatitis, esophagitis, gastritis, constipation, coronary syndrome, myocardial infarction, metabolic disorders, diabetes, hepatitis, liver cirrhosis, and sexual dysfunction in males. Drug use (marijuana, cocaine, heroin, inhalants) increases the risk of illness and infection, causes heart conditions, vein collapse, blood vessel infections, nausea, abdominal pain, appetite changes, weight loss, liver damage, seizures, stroke, mental confusion, brain damage, and problems with memory, attention, and decision-making. Drug users also have higher risks of injuries, accidents, domestic violence, and sexually transmitted infections.",
+		"gold_chunks": [
+			"unknown_grade_unknown_46",
+			"unknown_grade_unknown_47",
+			"unknown_grade_unknown_48",
+			"unknown_grade_unknown_49"
+		]
+	}
+]
