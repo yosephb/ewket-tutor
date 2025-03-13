@@ -1,0 +1,414 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.backButton {
+  font-size: 1rem;
+  color: #0070f3;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+/* Setup Card Styles */
+.setupCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.setupCard h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+}
+
+.setupOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.optionGroup label {
+  font-weight: 500;
+  color: #555;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+}
+
+.subjectSelect {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.startButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.examInfo {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Exam Container Styles */
+.examContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timerBar {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 3.5rem;
+  z-index: 5;
+}
+
+.timer {
+  font-weight: 500;
+  color: #333;
+}
+
+.questionNavigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.currentNav {
+  background-color: #0070f3;
+  color: white;
+  border-color: #0070f3;
+}
+
+.answeredNav {
+  background-color: #d1fae5;
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.questionCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questionNumber {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.questionText {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  background-color: #f9fafb;
+}
+
+.selectedOption {
+  background-color: #f0f7ff;
+  border-color: #0070f3;
+}
+
+.optionText {
+  font-size: 1rem;
+  color: #333;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.navigationButtons .navButton {
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+}
+
+.explainButton {
+  padding: 0.75rem 1.25rem;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.finishButton {
+  padding: 0.75rem 1.25rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Results Card Styles */
+.resultsCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resultsCard h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+}
+
+.scoreCircle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f0fdf4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  border: 4px solid #10b981;
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+}
+
+.scoreNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.scoreTotal {
+  font-size: 1.2rem;
+  color: #10b981;
+}
+
+.scorePercent {
+  font-size: 1.1rem;
+  color: #10b981;
+  font-weight: 500;
+}
+
+.resultsSummary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resultsSummary p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reviewButton, .newExamButton {
+  flex: 1;
+  padding: 0.75rem 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.reviewButton {
+  background-color: white;
+  color: #0070f3;
+  border: 1px solid #0070f3;
+}
+
+.newExamButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+}
+
+.aiAnalysis {
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.aiAnalysis h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #0070f3;
+}
+
+.analysisContent {
+  margin-bottom: 1.25rem;
+}
+
+.analysisContent p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.generateButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  
+  .main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .setupCard, .resultsCard {
+    padding: 2rem;
+  }
+  
+  .setupOptions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .optionGroup {
+    flex: 1;
+  }
+  
+  .questionText {
+    font-size: 1.2rem;
+  }
+} 

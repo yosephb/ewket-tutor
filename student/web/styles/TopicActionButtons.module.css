@@ -1,0 +1,103 @@
+.actionButtonsContainer {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+}
+
+.progressIndicator {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.progressBadge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  background-color: #e6f7ef;
+  color: #047857;
+  font-weight: 500;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.knowledgeCheck {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.eslceStyle {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.buttonIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.buttonTitle {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.buttonDescription {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.completedIcon {
+  font-size: 1.2rem;
+  color: #047857;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .buttonGroup {
+    flex-direction: row;
+  }
+  
+  .actionButton {
+    flex: 1;
+  }
+} 

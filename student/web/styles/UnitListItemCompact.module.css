@@ -1,0 +1,61 @@
+.unitItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.unitInfo {
+  flex: 1;
+}
+
+.unitTitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.topicCount {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+}
+
+.knowledgeCheck {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.eslceStyle {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+} 

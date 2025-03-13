@@ -1,0 +1,73 @@
+.unitCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.unitHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.unitTitle {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.topicCount {
+  font-size: 0.85rem;
+  color: #666;
+  background-color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+}
+
+.unitActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.studyButton, .quizButton, .eslceButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.studyButton {
+  background-color: #f0f7ff;
+  color: #0369a1;
+}
+
+.quizButton {
+  background-color: #f0fdf4;
+  color: #047857;
+}
+
+.eslceButton {
+  background-color: #fff7ed;
+  color: #c2410c;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .unitActions {
+    flex-direction: column;
+  }
+} 

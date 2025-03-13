@@ -1,0 +1,226 @@
+.container {
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.tabsContainer {
+  display: flex;
+  overflow-x: auto;
+  background-color: #f5f7ff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.tab {
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #555;
+  white-space: nowrap;
+  flex: 1;
+  min-width: max-content;
+}
+
+.activeTab {
+  background-color: white;
+  color: #0070f3;
+  font-weight: 500;
+  box-shadow: 0 2px 0 #0070f3;
+}
+
+.contentContainer {
+  padding: 1.5rem;
+  min-height: 300px;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 112, 243, 0.1);
+  border-radius: 50%;
+  border-top-color: #0070f3;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #666;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Practice Questions Styles */
+.practiceQuestions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.questionCard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.question {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.option label {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.checkButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.moreButton {
+  background-color: white;
+  color: #0070f3;
+  border: 1px solid #0070f3;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+/* Key Points Styles */
+.keyPoints h3, .examples h3, .pastExams h3, .practiceQuestions h3 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.pointsList {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.point {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.actionButton {
+  background-color: #f0f7ff;
+  color: #0070f3;
+  border: 1px solid #d1e9ff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Examples Styles */
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exampleCard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.scenario {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.explanation {
+  color: #555;
+  margin: 0;
+}
+
+/* Past Exams Styles */
+.pastExams {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.examQuestion {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.examYear {
+  font-size: 0.85rem;
+  color: #0070f3;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .tab {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .contentContainer {
+    padding: 2rem;
+  }
+  
+  .question {
+    font-size: 1.1rem;
+  }
+  
+  .keyPoints h3, .examples h3, .pastExams h3, .practiceQuestions h3 {
+    font-size: 1.2rem;
+  }
+} 

@@ -1,0 +1,52 @@
+.unitListContainer {
+  padding: 0.5rem 0;
+}
+
+.courseTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.unitGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.unitCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.unitCard:hover, .unitCard:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.unitTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.topicCount {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (min-width: 640px) {
+  .unitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .unitGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 

@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.backButton {
+  font-size: 1rem;
+  color: #0070f3;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.topicTitle {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabContainer {
+  display: flex;
+  overflow-x: auto;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 3.5rem;
+  z-index: 5;
+}
+
+.tabButton {
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.activeTab {
+  color: #0070f3;
+  border-bottom-color: #0070f3;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+.contentSection {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contentSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.conceptsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.conceptItem {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.conceptItem h4 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.conceptItem p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #555;
+}
+
+.diagramsSection {
+  margin-top: 2rem;
+}
+
+.diagram {
+  margin-bottom: 1.5rem;
+}
+
+.diagramImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.examTips {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fffbea;
+  border-left: 4px solid #f6e05e;
+  border-radius: 4px;
+}
+
+.examTips h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #744210;
+}
+
+.examTips p {
+  font-size: 0.95rem;
+  color: #744210;
+  margin: 0;
+}
+
+.chatButton {
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 40;
+}
+
+.loadingContainer, .errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.errorContainer {
+  color: #e53e3e;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  
+  .tabContainer {
+    padding: 0 1rem;
+    top: 4rem;
+  }
+  
+  .main {
+    padding: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .topicTitle {
+    font-size: 1.5rem;
+  }
+  
+  .chatButton {
+    bottom: 2rem;
+    right: 2rem;
+  }
+} 

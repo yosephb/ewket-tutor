@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 4rem; /* Space for bottom navigation */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.noCourse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
+
+.unitCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.unitTitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.unitFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topicCount {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.knowledgeCheckButton, .eslceStyleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.knowledgeCheckButton {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.eslceStyleButton {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.knowledgeCheckButton:hover, .eslceStyleButton:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .header {
+    padding: 1rem 2rem;
+  }
+} 
