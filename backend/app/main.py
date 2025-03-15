@@ -1,6 +1,6 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Query
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Optional
+from typing import Optional, List
 from pathlib import Path
 import json
 from datetime import datetime
@@ -8,7 +8,7 @@ from datetime import datetime
 import logging
 from typing import Dict
 
-from .routers import student, admin  
+from .routers import student, admin, exam  
 from .services.pdf_service import PDFService
 from .services.vector_store import VectorStore
 from .services.llm_service import LLMService
@@ -35,6 +35,9 @@ app.include_router(student.router, prefix="/student", tags=["student"])
 
 # Include the Admin router with prefix /admin
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
+
+# Include the Exam router with prefix /api/admin/exams
+app.include_router(exam.router, prefix="/api/admin/exams", tags=["exams"])
 
 @app.get("/health")
 async def health_check():
@@ -265,14 +268,17 @@ async def index_document_chunks(folder_name: str):
         logger.error(f"Error indexing document chunks: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/api/admin/documents/query")
+@app.post("/api/query")
 async def query_documents(
-    query: str = Form(...),
-    subject: Optional[str] = Form(None),
-    grade: Optional[str] = Form(None),
-    n_results: Optional[int] = Form(5)
+    query: str = Body(...),
+    subject: Optional[str] = Body(None),
+    grade: Optional[str] = Body(None),
+    n_results: int = Body(10),
+    content_types: Optional[List[str]] = Body(None)
 ):
-    logger.info(f"Received query request: {query}")
+    """
+    Query the vector database for relevant documents
+    """
     try:
         # Prepare filters based on subject and grade
         filters = {}
@@ -281,11 +287,16 @@ async def query_documents(
         if grade:
             filters["grade"] = grade
 
+        # Set default content types if not specified
+        if not content_types:
+            content_types = ["textbook", "exam_question"]
+
         # Query the vector store
         results = await vector_store.query(
             query_text=query,
             filters=filters if filters else None,
-            n_results=n_results           
+            n_results=n_results,
+            content_types=content_types           
         )
 
         # Initialize LLM service
@@ -297,8 +308,6 @@ async def query_documents(
             contexts=results["documents"]
         )
 
-        print(results["chunk_ids"])
-
         return {
             "status": "success",
             "query_results": {
@@ -306,11 +315,95 @@ async def query_documents(
                 "metadatas": results["metadatas"],
                 "distances": results["distances"],
                 "normalized_scores": results["normalized_scores"],
-                "chunk_ids": results["chunk_ids"]
+                "chunk_ids": results["chunk_ids"],
+                "textbook_results": results["textbook_results"],
+                "exam_results": results["exam_results"]
             },
             "llm_response": llm_response["response"]
         }
 
     except Exception as e:
         logger.error(f"Error querying documents: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/admin/debug/embeddings")
+async def debug_embeddings():
+    """Debug endpoint to check embeddings in the vector store"""
+    try:
+        # Get a sample of embeddings
+        results = await vector_store.collection.get(
+            limit=20,
+            include=["metadatas"]
+        )
+        
+        # Count by type
+        type_counts = {}
+        for metadata in results["metadatas"]:
+            doc_type = metadata.get("type", "unknown")
+            type_counts[doc_type] = type_counts.get(doc_type, 0) + 1
+            
+        # Sample of each type
+        samples = {}
+        for i, metadata in enumerate(results["metadatas"]):
+            doc_type = metadata.get("type", "unknown")
+            if doc_type not in samples and i < len(results["ids"]):
+                samples[doc_type] = {
+                    "id": results["ids"][i],
+                    "metadata": metadata
+                }
+                
+        return {
+            "total_count": len(results["ids"]),
+            "type_counts": type_counts,
+            "samples": samples
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/admin/textbook/update-type-field")
+async def update_textbook_type_field():
+    """Update all textbook entries to have a type field"""
+    try:
+        # Get all embeddings - we'll filter in code for those without type
+        results = await vector_store.collection.get(
+            limit=1000,  # Adjust as needed
+            include=["metadatas", "documents", "embeddings"]
+        )
+        
+        if not results or len(results["ids"]) == 0:
+            return {"status": "No documents found"}
+            
+        # Update each document to add type field
+        count = 0
+        for i, embedding_id in enumerate(results["ids"]):
+            metadata = results["metadatas"][i]
+            
+            # Skip if already has type field
+            if "type" in metadata and metadata["type"]:
+                continue
+                
+            # Add type field
+            document = results["documents"][i]
+            embedding = results["embeddings"][i]
+            
+            # Assume it's a textbook if it has page field or no type
+            if "page" in metadata:
+                metadata["type"] = "textbook"
+                
+                # Update in collection
+                vector_store.collection.update(
+                    ids=[embedding_id],
+                    metadatas=[metadata],
+                    documents=[document],
+                    embeddings=[embedding]
+                )
+                count += 1
+        
+        return {
+            "status": "success",
+            "updated_count": count,
+            "total_found": len(results["ids"])
+        }
+    except Exception as e:
+        logger.error(f"Error updating type field: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
