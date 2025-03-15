@@ -25,7 +25,7 @@ export default function TopicPage() {
 
     const loadTopicData = async () => {
       try {
-        const response = await fetch('/data/course_catalog_v1.json');
+        const response = await fetch('/data/course_catalog_v2.json');
         const data = await response.json();
         
         const selectedCourse = data.courses.find(c => c.courseName === decodeURIComponent(course));

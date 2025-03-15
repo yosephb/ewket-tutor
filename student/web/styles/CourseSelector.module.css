@@ -51,4 +51,68 @@
 
 .courseItem:hover {
   background-color: #f9f9f9;
+}
+
+.courseSelector {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5rem auto;
+  z-index: 100;
+}
+
+.selectorButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.selectorButton:hover {
+  border-color: #adb5bd;
+}
+
+.dropdownIcon {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.courseOption {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.courseOption:hover {
+  background-color: #f8f9fa;
+}
+
+.courseOption.selected {
+  background-color: #e9ecef;
+  font-weight: 500;
 } 

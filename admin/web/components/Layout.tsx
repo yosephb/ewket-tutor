@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Dashboard', href: '/' },
   { name: 'Documents', href: '/documents' },
   { name: 'Chunks', href: '/chunks' },
+  { name: 'Exams', href: '/exams' },
 ]
 
 export default function Layout({ children }: { children: React.ReactNode }) {

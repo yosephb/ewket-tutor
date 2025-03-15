@@ -12,19 +12,25 @@ export default function BottomNavigation() {
     setShowESLCEOptions(!showESLCEOptions);
   };
   
+  // Function to clear course selection and return to dashboard
+  const goToDashboard = () => {
+    // Clear the selected course from localStorage to show the dashboard
+    localStorage.removeItem('selectedCourse');
+    // Navigate to home page without course parameter
+    router.push('/', undefined, { shallow: true });
+  };
+  
   return (
     <nav className={styles.bottomNav}>
-      <Link href="/">
-        <div className={`${styles.navItem} ${router.pathname === '/' ? styles.active : ''}`}>
-          <span className={styles.navIcon}>🏠</span>
-          <span className={styles.navLabel}>Home</span>
-        </div>
-      </Link>
+      <div className={styles.navItem} onClick={goToDashboard}>
+        <div className={styles.navIcon}>🏠</div>
+        <div className={styles.navLabel}>Home</div>
+      </div>
       
       <Link href="/search">
-        <div className={`${styles.navItem} ${router.pathname === '/search' ? styles.active : ''}`}>
-          <span className={styles.navIcon}>🔍</span>
-          <span className={styles.navLabel}>Search</span>
+        <div className={styles.navItem}>
+          <div className={styles.navIcon}>🔍</div>
+          <div className={styles.navLabel}>Search</div>
         </div>
       </Link>
       
@@ -32,8 +38,8 @@ export default function BottomNavigation() {
         className={`${styles.navItem} ${styles.eslceNavItem} ${showESLCEOptions ? styles.active : ''}`}
         onClick={toggleESLCEOptions}
       >
-        <span className={styles.navIcon}>📝</span>
-        <span className={styles.navLabel}>ESLCE</span>
+        <div className={styles.navIcon}>📝</div>
+        <div className={styles.navLabel}>ESLCE</div>
         
         {showESLCEOptions && (
           <div className={styles.eslceOptions}>
@@ -54,16 +60,16 @@ export default function BottomNavigation() {
       </div>
       
       <Link href="/chat">
-        <div className={`${styles.navItem} ${router.pathname === '/chat' ? styles.active : ''}`}>
-          <span className={styles.navIcon}>💬</span>
-          <span className={styles.navLabel}>Chat</span>
+        <div className={styles.navItem}>
+          <div className={styles.navIcon}>💬</div>
+          <div className={styles.navLabel}>Chat</div>
         </div>
       </Link>
       
       <Link href="/profile">
-        <div className={`${styles.navItem} ${router.pathname === '/profile' ? styles.active : ''}`}>
-          <span className={styles.navIcon}>👤</span>
-          <span className={styles.navLabel}>Profile</span>
+        <div className={styles.navItem}>
+          <div className={styles.navIcon}>👤</div>
+          <div className={styles.navLabel}>Profile</div>
         </div>
       </Link>
     </nav>
